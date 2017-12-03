@@ -1,0 +1,15 @@
+<%= render 'shared/errors', obj: @workout %>
+
+<%= form_for @workout do |f| %>
+  <div class="form-group">
+    <%= f.label :date %>
+    <%= f.date_select :date, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
