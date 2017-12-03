@@ -7,6 +7,10 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :workout_type %>
+    <%= f.select :workout_type, options_for_select([ "Strength", "Cardio" ]), {}, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
     <%= f.label :description %>
     <%= f.text_field :description, class: "form-control" %>
   </div>
