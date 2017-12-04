@@ -17,3 +17,12 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function() {
+
+  // Link to specified page when clicking table rows
+  $('table.row-links').on('click', 'tbody tr', function(event) {
+    Turbolinks.visit($(this).data('link'))
+  });
+});
