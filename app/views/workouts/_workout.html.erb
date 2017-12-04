@@ -1,5 +1,5 @@
 <tr data-link="<%= workout_path workout %>">
-  <td><%= workout.date %></td>
-  <td><%= workout.description %></td>
+  <td><%= workout.date.to_formatted_s(:rfc822) %></td>
+  <td><%= workout.workout_type %></td>
 </tr>
 
